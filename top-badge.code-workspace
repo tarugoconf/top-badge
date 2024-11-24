@@ -1,8 +1,12 @@
 {
-	"folders": [
-		{
-			"path": "."
-		}
-	],
-	"settings": {}
+  "folders": [
+    {
+      "path": "."
+    },
+    {
+      "name": "Badger Filesystem",
+      "uri": "pico:"
+    }
+  ],
+  "settings": {}
 }
