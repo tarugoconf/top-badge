@@ -1,42 +1,40 @@
 {
-    "python.analysis.typeCheckingMode": "basic",
-    "micropico.syncFileTypes": [
-        "py",
-        "txt",
-        "log",
-        "json",
-        "xml",
-        "html",
-        "js",
-        "css",
-        "mpy"
-    ],
-    "micropico.pyIgnore": [
-        "**/.picowgo",
-        "**/.micropico",
-        "**/.vscode",
-        "**/.gitignore",
-        "**/.git",
-        "**/.DS_Store",
-        "**/project.pico-go",
-        "**/env",
-        "**/.env",
-        "**/venv",
-        "**/.venv",
-        "**/.idea",
-        "**/badge-holder",
-        "**/typings"
-    ],
-    "python.languageServer": "Pylance",
-    "python.analysis.diagnosticSeverityOverrides": {
-        "reportMissingModuleSource": "none"
-    },
-    "python.terminal.activateEnvironment": false,
-    "micropico.openOnStart": true,
-    "python.analysis.typeshedPaths": [
-        "~/.micropico-stubs/included"
-    ],
-    "python.analysis.extraPaths": [
-        "~/.micropico-stubs/included"
-    ]
+  "python.analysis.typeCheckingMode": "basic",
+  "micropico.syncFileTypes": [
+    "py",
+    "txt",
+    "log",
+    "json",
+    "xml",
+    "html",
+    "js",
+    "css",
+    "mpy",
+    "jpg",
+    "png"
+  ],
+  "micropico.pyIgnore": [
+    "**/.picowgo",
+    "**/.micropico",
+    "**/.vscode",
+    "**/.gitignore",
+    "**/.git",
+    "**/.DS_Store",
+    "**/project.pico-go",
+    "**/env",
+    "**/.env",
+    "**/venv",
+    "**/.venv",
+    "**/.idea",
+    "**/badge-holder",
+    "**/typings"
+  ],
+  "python.languageServer": "Pylance",
+  "python.analysis.diagnosticSeverityOverrides": {
+    "reportMissingModuleSource": "none"
+  },
+  "python.terminal.activateEnvironment": false,
+  "micropico.openOnStart": true,
+  "python.analysis.typeshedPaths": ["~/.micropico-stubs/included"],
+  "python.analysis.extraPaths": ["~/.micropico-stubs/included"]
 }
