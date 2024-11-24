@@ -34,7 +34,6 @@ env/
 *.mpy
 
 # IDEs and editors
-.vscode/
 .idea/
 
 # macOS specific
