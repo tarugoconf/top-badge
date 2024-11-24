@@ -90,8 +90,6 @@ It should automatically generate the `src/assets/qr/bit_matrix.py` file with the
 
 ## License
 
-The badge holder is licensed under a [Creative Commons Attribution-NonCommercial 4.0 International License](./badge-holder/LICENSE_CC-BY-NC.txt).
-
 All the code is licensed under the [MIT License](LICENSE).
 
 ## Contributing
