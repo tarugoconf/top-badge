@@ -1,6 +1,10 @@
 # TOP & Badger 2040(W) <!-- omit in toc -->
 
-An eink badge project for [top.gal](https://top.gal) events.
+An eink badge project for [top.gal](https://top.gal) events using the Badger 2040(W) board.
+
+> ⚠️ **Work In Progress** ⚠️
+>
+> This project is under development and still far from being finished. But don't let that stop you from taking a look at the code and contributing to it :)
 
 ## Table of Contents <!-- omit in toc -->
 
