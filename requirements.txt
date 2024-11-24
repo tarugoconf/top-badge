@@ -1,0 +1,3 @@
+qrcode
+numpy
+git+https://github.com/V3ntus/badger2040-pystub
