@@ -66,7 +66,6 @@ Type "help()" for more information or .help for custom vREPL commands.
 >>> 
 ```
 
-
 ### Generate QR code matrix
 
 To generate the QR code matrix:
