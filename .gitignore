@@ -51,3 +51,6 @@ env/
 # Logs and temp files
 *.log
 *.tmp
+
+# Project specific
+WIFI_CONFIG.py
