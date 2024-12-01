@@ -52,7 +52,7 @@ source .venv/bin/activate
 ### Install dependencies in your virtual environment
 
 ```bash
-pip3 install -r requirements.txt
+pip3 install -r requirements.txt.req
 ```
 
 ### Setup MicroPico Project
