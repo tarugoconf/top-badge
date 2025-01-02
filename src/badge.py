@@ -41,14 +41,7 @@ def draw_badge():
 
 This module serves as the backbone for generating customizable badges, making it easy
 to produce professional and functional e-ink displays for various applications.
-"""
 
-import math
-import badger2040  # type: ignore # noqa: F401
-
-from src.assets.qr.bit_matrix import BIT_MATRIX
-
-""""""
 # BADGE DISPLAY DIMENSIONS DIAGRAM ######################
 #
 #                       296px width
@@ -66,8 +59,12 @@ from src.assets.qr.bit_matrix import BIT_MATRIX
 # ├───────────────────────────────┤█████████████████████│
 # │       DETAILS2 167 x 20       │█████████████████████│
 # └───────────────────────────────┴─────────────────────┘
-""""""
+"""
 
+import math
+import badger2040  # type: ignore # noqa: F401
+
+from src.assets.qr.bit_matrix import BIT_MATRIX
 
 # ------------------------------
 #       Constants Definitions
@@ -82,6 +79,9 @@ HEIGHT = badger2040.HEIGHT  # 128
 IMAGE_QR_WIDTH = 128
 IMAGE_QR_HEIGHT = HEIGHT
 
+# Sections constants
+SECTIONS_WIDTH = WIDTH - IMAGE_QR_WIDTH
+
 # Company constants
 COMPANY_HEIGHT = 30
 
@@ -91,18 +91,22 @@ DETAILS_HEIGHT = 20
 # Name constants
 NAME_HEIGHT = HEIGHT - COMPANY_HEIGHT - (DETAILS_HEIGHT * 2) - 2
 
-# Text constants
+# Text dimensions constants
 TEXT_WIDTH = WIDTH - IMAGE_QR_WIDTH - 1
 
+# Text sizes constants
 COMPANY_TEXT_SIZE = 0.6
 DETAILS_TEXT_SIZE = 0.5
 
+# Text padding constants
 LEFT_PADDING = 5
 NAME_PADDING = 20
 DETAIL_SPACING = 10
 
+# Content path
 CONTENT_PATH = "//src/content.txt"
 
+# Default content
 DEFAULT_TEXT = """COMPANY_NAME
 ATTENDEE_NAME
 DETAILS1_TITLE
@@ -168,7 +172,9 @@ def truncatestring(text, text_size, width):
     limit, the function returns the truncated text.
     """
     while True:
-        length = display.measure_text(text, text_size)
+        length = display.measure_text(
+            text, text_size
+        )  # pylint: disable=assignment-from-no-return
         if length > 0 and length > width:
             text = text[:-1]
         else:
@@ -181,8 +187,24 @@ def truncatestring(text, text_size, width):
 # ------------------------------
 
 
-def draw_company(company_text: str) -> None:
+def draw_company(company: str) -> None:
     """Draw the company name on the badge."""
+    # Draw a black background behind the company
+    display.set_pen(0)
+    display.rectangle(0, 0, TEXT_WIDTH, COMPANY_HEIGHT)  # 0 is black
+
+    display.set_pen(15)  # white
+    display.set_font("serif")
+
+    company = truncatestring(company, 0.6, 150)
+
+    display.text(
+        company,
+        LEFT_PADDING,
+        (COMPANY_HEIGHT // 2) + 1,
+        TEXT_WIDTH,
+        COMPANY_TEXT_SIZE,
+    )
 
 
 def draw_name(attendee_name: str) -> None:
